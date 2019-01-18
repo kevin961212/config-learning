@@ -1,0 +1,15 @@
+server:
+  port: 8011  #指定服务端口
+  #配置服务客户端Client应用入口，链接ConfigServer入口
+spring:
+  cloud:
+    config:
+      #链接configServer服务的入口
+      uri: http://localhost:8180
+      #选择生产配置文件
+      profile: prd
+      #后端存储是git时，默认使用的是master
+      label: master
+encrypt:
+  #取foobar-dev.yml文件的application名字，即为foobar
+  key: foo

@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+     #配置服务客户端ClientServer的连接入口
+      uri: http://localhost:8080
+      profile: refresh
+      label: master #当configserver后端存储为git时默认为master
+  application:
+   #取foobar-dev.yml这个文件的application名字时，即为foobar
+    name: foobar

@@ -1,0 +1,22 @@
+server:
+  port: 8080  #指定服务端口
+
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+        #git的项目地址
+          uri: https://gitee.com/LoneTraveler/kevin-config-repo
+          username:
+          password:
+  #连接MQ
+  rabbitmq:
+    host: localhost   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
+    port: 5672
+    username: guest   # 默认账户
+    password: guest   # 默认密码
+encrypt:
+  key: foo

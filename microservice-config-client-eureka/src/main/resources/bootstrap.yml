@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: MICROSERVICE-CONFIG-SERVER-EUREKA
+  application:
+   #取foobar-dev.yml这个文件的application名字时，即为foobar
+    name: foobar
+eureka:
+  client:
+    #注册中心地址
+    service-url:
+      defaultZone: http://kevin:123456@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

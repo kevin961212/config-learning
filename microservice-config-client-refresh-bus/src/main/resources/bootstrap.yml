@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+     #配置服务客户端ClientServer的连接入口
+      uri: http://localhost:8080
+      profile: dev
+      label: master #当configserver后端存储为git时默认为master
+    bus:
+      trace:
+        enabled: true
+  application:
+   #取foobar-dev.yml这个文件的application名字时，即为foobar
+    name: foobar
+  #连接MQ
+  rabbitmq:
+    host: localhost   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
+    port: 5672
+    username: guest   # 默认账户
+    password: guest   # 默认密码
